@@ -1,0 +1,467 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://faguzmanl-2015.appspot.com/_ah/api",
+  "name" : "conference",
+  "version" : "v1",
+  "description" : "API for the Conference Central Backend application.",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://faguzmanl-2015.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "conference.saveProfile" : {
+      "path" : "profile",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.saveProfile",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.getProfile" : {
+      "path" : "profile",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.getProfile",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.getConferencesToAttend" : {
+      "path" : "getConferencesToAttend",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.getConferencesToAttend",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.queryConferences_nofilters" : {
+      "path" : "queryConferences_nofilters",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.queryConferences_nofilters",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.unregisterFromConference" : {
+      "path" : "conference/{websafeConferenceKey}/registration",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.unregisterFromConference",
+      "request" : {
+        "parameters" : {
+          "websafeConferenceKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.registerForConference" : {
+      "path" : "conference/{websafeConferenceKey}/registration",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.registerForConference",
+      "request" : {
+        "parameters" : {
+          "websafeConferenceKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.getConferencesCreated" : {
+      "path" : "getConferencesCreated",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.getConferencesCreated",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.getConference" : {
+      "path" : "conference/{websafeConferenceKey}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.getConference",
+      "request" : {
+        "parameters" : {
+          "websafeConferenceKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.conferenceApi.filterPlayground" : {
+      "path" : "filterPlayground",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.filterPlayground",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.queryConferences" : {
+      "path" : "queryConferences",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.queryConferences",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "conference.createConference" : {
+      "path" : "conference",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "99809572291-bqq3p490a29h9k34jm3nm0il06qote5d.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "co.edu.unal.loteria.spi.ConferenceApi.createConference",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "ProfileForm" : {
+        "id" : "ProfileForm",
+        "type" : "object",
+        "properties" : {
+          "displayName" : {
+            "type" : "string"
+          },
+          "teeShirtSize" : {
+            "$ref" : "RolUsuario"
+          }
+        }
+      },
+      "RolUsuario" : {
+        "id" : "RolUsuario",
+        "type" : "string",
+        "enum" : [ "NOT_SPECIFIED", "Cliente", "Administrador" ]
+      },
+      "Profile" : {
+        "id" : "Profile",
+        "type" : "object",
+        "properties" : {
+          "displayName" : {
+            "type" : "string"
+          },
+          "mainEmail" : {
+            "type" : "string"
+          },
+          "userId" : {
+            "type" : "string"
+          },
+          "conferenceKeysToAttend" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "teeShirtSize" : {
+            "$ref" : "RolUsuario"
+          }
+        }
+      },
+      "ResultadoLoteria" : {
+        "id" : "ResultadoLoteria",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "topics" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "city" : {
+            "type" : "string"
+          },
+          "endDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "month" : {
+            "type" : "integer"
+          },
+          "maxAttendees" : {
+            "type" : "integer"
+          },
+          "seatsAvailable" : {
+            "type" : "integer"
+          },
+          "startDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "websafeKey" : {
+            "type" : "string"
+          },
+          "organizerDisplayName" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ResultadoLoteriaCollection" : {
+        "id" : "ResultadoLoteriaCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "ResultadoLoteria"
+            }
+          }
+        }
+      },
+      "WrappedBoolean" : {
+        "id" : "WrappedBoolean",
+        "type" : "object",
+        "properties" : {
+          "result" : {
+            "type" : "boolean"
+          },
+          "reason" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ResultadoQueryForm" : {
+        "id" : "ResultadoQueryForm",
+        "type" : "object",
+        "properties" : {
+          "filters" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Filter"
+            }
+          }
+        }
+      },
+      "Filter" : {
+        "id" : "Filter",
+        "type" : "object",
+        "properties" : {
+          "field" : {
+            "$ref" : "Field"
+          },
+          "operator" : {
+            "$ref" : "Operator"
+          },
+          "value" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Field" : {
+        "id" : "Field",
+        "type" : "string",
+        "enum" : [ "CITY", "TOPIC", "MONTH", "MAX_ATTENDEES" ]
+      },
+      "Operator" : {
+        "id" : "Operator",
+        "type" : "string",
+        "enum" : [ "EQ", "LT", "GT", "LTEQ", "GTEQ", "NE" ]
+      },
+      "ResultadoForm" : {
+        "id" : "ResultadoForm",
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "topics" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "city" : {
+            "type" : "string"
+          },
+          "endDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "maxAttendees" : {
+            "type" : "integer"
+          },
+          "startDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "co.edu.unal.loteria.spi.ConferenceApi.saveProfile" : {
+        "request" : {
+          "$ref" : "ProfileForm"
+        },
+        "response" : {
+          "$ref" : "Profile"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.getProfile" : {
+        "response" : {
+          "$ref" : "Profile"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.getConferencesToAttend" : {
+        "response" : {
+          "$ref" : "ResultadoLoteriaCollection"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.queryConferences_nofilters" : {
+        "response" : {
+          "$ref" : "ResultadoLoteriaCollection"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.unregisterFromConference" : {
+        "response" : {
+          "$ref" : "WrappedBoolean"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.registerForConference" : {
+        "response" : {
+          "$ref" : "WrappedBoolean"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.getConferencesCreated" : {
+        "response" : {
+          "$ref" : "ResultadoLoteriaCollection"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.getConference" : {
+        "response" : {
+          "$ref" : "ResultadoLoteria"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.filterPlayground" : {
+        "response" : {
+          "$ref" : "ResultadoLoteriaCollection"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.queryConferences" : {
+        "request" : {
+          "$ref" : "ResultadoQueryForm"
+        },
+        "response" : {
+          "$ref" : "ResultadoLoteriaCollection"
+        }
+      },
+      "co.edu.unal.loteria.spi.ConferenceApi.createConference" : {
+        "request" : {
+          "$ref" : "ResultadoForm"
+        },
+        "response" : {
+          "$ref" : "ResultadoLoteria"
+        }
+      }
+    }
+  }
+}
